@@ -30,7 +30,7 @@
 	\begin{block}{}
 		Consider a decay process where spin-$\frac{1}{2}$ baryon($\Xi^-$)  decays into another spin-$\frac{1}{2}$ baryon ($\Lambda$) and a spin-0 meson($\pi^-$). In quantum mechanics, this decay $\Xi^-\to \Lambda\pi^-$  can be modeled as a transition from the initial state $\ket{\Xi^-}$ to the final state $\ket{\Lambda,\pi^-}$. Since $\pi^-$ is a spin-0 meson, we focues on the orbital angular momentum carried by $\pi^-$. In the S-wave transition  $\pi^-$ carries no angular momentum($l=0$), while in the P-wave transition it carries an angular momentum of $l=1$.  The initial state of $\Xi^-$ can be defined as		$\Xi^-=\ket{\frac{1}{2},\frac{1}{2}}$. The decay process is then represented as:
 		\begin{align}
-			\ket{\frac{1}{2},\frac{1}{2}}_\Xi &= A \ket{\frac{1}{2},\frac{1}{2}}_\Lambda\ket{0,0}_\pi Y_0^0 +B[C_{\frac{1}{2},\frac{1}{2},1,0}^{\frac{1}{2},\frac{1}{2}}\ket{\frac{1}{2},\frac{1}{2}}_\Lambda\ket{1,0}\pi Y_1^0\nonumber\\
+			\ket{\frac{1}{2},\frac{1}{2}}_\Xi &= A \ket{\frac{1}{2},\frac{1}{2}}_\Lambda\ket{0,0}_\pi Y_0^0 +B[C_{\frac{1}{2},\frac{1}{2},1,0}^{\frac{1}{2},\frac{1}{2}}\ket{\frac{1}{2},\frac{1}{2}}_\Lambda\ket{1,0}_\pi Y_1^0\nonumber\\
 			&+C_{\frac{1}{2},-\frac{1}{2},1,1}^{\frac{1}{2},\frac{1}{2}}\ket{\frac{1}{2},-\frac{1}{2}}_\Lambda\ket{1,1}\pi Y_1^1]\label{Decay}
 		\end{align}
 	\end{block}
@@ -52,7 +52,7 @@
 	\begin{block}{}
 		If we not distinguish $\Lambda_{\uparrow}$ and $\Lambda_{\downarrow}$, \eqref{Lambda} turns into:
 		\begin{align}
-			\Lambda(\theta,\phi)=\abs{a}^2+\abs{b}^2+2\re[a^*b]\cos\theta = 1+\alpha\cos\theta.
+			\Lambda(\theta,\phi)=\abs{a}^2+\abs{b}^2+2\re[a^*b]\cos\theta = 1+\alpha\cos\theta.\label{Spectra}
 		\end{align}
 		The wavefunction should be normalized at the final calculation, but at the moment we will require $\abs{a}^2+\abs{b}^2=1$ and introduce decay parameters:
 		\begin{align}
@@ -112,6 +112,82 @@
 			&= \frac{1}{2}(1+\gamma) + 2\re[a^*b]\cos\theta  + \frac{\cos^2\theta-\sin^2\theta}{2}(1-\gamma)\nonumber\\
 			&=\frac{1}{2}(1+\gamma) + \alpha\cos\theta  + \frac{\cos^2\theta-\sin^2\theta}{2}(1-\gamma)
 .		\end{align}
+	\end{block}
+\end{frame}
+\begin{frame}{CoM Frame of $\Lambda$ }
+	\begin{block}{}
+		Untill now we calculated $\Lambda$ polarization vector in CoM of $\Xi$. In order to obtain meaningful results, we need to represent  it in $\Lambda$ CoM. We would define the orientation of $\Lambda$ CoM frame as:
+		\begin{align}
+			\begin{cases}
+				\hat z_\Lambda = \hat \Lambda=(\sin\theta\cos\phi,\sin\theta\sin\phi,\cos\theta)\\
+				\hat x_\Lambda = \frac{\hat P_\Xi\times\hat \Lambda}{\abs{\hat P_\Xi\times\hat \Lambda}}=(-\sin\phi,\cos\phi,0)\\
+				\hat y_\Lambda= \hat z_\Lambda\times\hat x_\Lambda=(-\cos\theta\cos\phi,-\cos\theta\sin\phi,\sin\theta)
+			\end{cases}\label{LCoord}
+		\end{align}
+		and obtain the representation of $\vec P$ as:
+		\begin{align}
+			\begin{cases}
+				P_{x,\Lambda} = \vec P \cdot \hat x_\Lambda\\
+				P_{y,\Lambda} = \vec P \cdot \hat y_\Lambda\\
+				P_{z,\Lambda} = \vec P \cdot \hat z_\Lambda
+			\end{cases}
+		\end{align}
+	\end{block}
+\end{frame}
+\begin{frame}{$P_{x,\Lambda}$}
+	\begin{block}{}
+		We should calculate each component of $\vec{P}_\Lambda$. Remind that, we stated by setting polarization of $\Xi$,$\vec P_{\Xi}=(0,0,1)$. However, $\Lambda$ CoM is defined relative to  $\vec P_{\Xi}$ and $\hat\Lambda$. Then, without loss of generality, we represent the polarization of $\Lambda$ in terms of $\Xi$ polarization and $\Lambda$ momentum direction.
+		\begin{align}
+			P_{x,\Lambda} =& -\sin\phi[\alpha\cos\phi-\beta\sin\phi+ (1-\gamma)\cos\theta\cos\phi]\sin\theta\nonumber\\
+			&+\cos\phi[\beta\cos\phi+\alpha\sin\phi+ (1-\gamma)\cos\theta\sin\phi]\sin\theta\nonumber\\
+			&=\beta\sin\theta = \beta (\vec{P}_{\Xi}\times \hat\Lambda)\cdot \hat x\label{PLx}
+		\end{align}
+		Here we used the fact that, From \eqref{LCoord}, $\vec{P}_{\Xi}\times \hat\Lambda=\abs{\vec P_{\Xi}\times\hat\Lambda}\hat x=\sin\theta\hat x$.
+	\end{block}
+\end{frame}
+\begin{frame}{$P_{y,\Lambda}$}
+	\begin{block}{}
+		\begin{align}
+				P_{y,\Lambda} =&-\cos\theta\cos\phi[\alpha\cos\phi-\beta\sin\phi+ (1-\gamma)\cos\theta\cos\phi]\sin\theta.\nonumber\\
+				&-\cos\theta\sin\phi[\beta\cos\phi+\alpha\sin\phi+ (1-\gamma)\cos\theta\sin\phi]\sin\theta.
+				\nonumber\\
+				&+\sin\theta[\frac{1}{2}(1+\gamma) + \alpha\cos\theta  + \frac{\cos^2\theta-\sin^2\theta}{2}(1-\gamma)]\nonumber\\
+				=&\sin\theta[\frac{1}{2}(1+\gamma)+(1-\gamma)(\frac{\cos^2\theta-\sin^2\theta}{2}-\cos^2\theta)]\nonumber\\
+				=&\sin\theta\gamma = \gamma \hat \Lambda\times(\vec{P}_\Xi\times\hat\Lambda)\cdot \hat y\label{PLy}
+		\end{align}
+	\end{block}
+\end{frame}
+\begin{frame}{$P_{z,\Lambda}$}
+	\begin{block}{}
+		\begin{align}
+			P_{z,\Lambda} =&\sin\theta\cos\phi [\alpha\cos\phi-\beta\sin\phi+ (1-\gamma)\cos\theta\cos\phi]\sin\theta\nonumber\\
+			+&\sin\theta\sin\phi[\beta\cos\phi+\alpha\sin\phi+ (1-\gamma)\cos\theta\sin\phi]\sin\theta\nonumber\\
+			+&\cos\theta[\frac{1}{2}(1+\gamma) + \alpha\cos\theta  + \frac{\cos^2\theta-\sin^2\theta}{2}(1-\gamma)]\nonumber\\
+			=&\alpha+\cos\theta[\frac{1+\gamma}{2}+(1-\gamma)(\frac{\cos^2\theta-\sin^2\theta}{2}+\sin^2\theta)]\nonumber\\
+			=&\alpha+\cos\theta\label{PLz}
+		\end{align}
+	\end{block}
+\end{frame}
+\begin{frame}{Summary}
+	\begin{block}{}
+		To summarize \eqref{PLx} - \eqref{PLz}, we have
+		\begin{align*}
+			\vec{P}_\Lambda \propto \beta \vec{P_\Xi}\times\hat \Lambda + \gamma\hat \Lambda\times( \vec{P_\Xi}\times\hat \Lambda)+(\alpha+\cos\theta)\hat\Lambda
+		\end{align*}
+		However, we should note that $\abs{\vec P}_\Lambda=1$. We need a normalization. Referring to  \eqref{Spectra} normalization parameter seems to be obvious, but we will show the derivation here. Remind that $\alpha^2+\beta^2+\gamma^2=1$.
+		\begin{align}
+			N&=\sqrt{(\alpha+\cos\theta)^2+(\beta\sin\theta)^2+(\gamma\sin\theta)^2}\nonumber\\
+			&=\sqrt{\alpha^2+2\alpha\cos\theta +\cos^2\theta + \cancelto{1-\alpha^2}{(\beta^2+\gamma^2)}(1-\cos^2\theta)}\nonumber\\
+			&= \sqrt{1 +2\alpha\cos\theta+\alpha^2\cos^2\theta}=1+\alpha\cos\theta
+		\end{align}
+	\end{block}
+\end{frame}
+\begin{frame}{Summary}
+	\begin{block}{}
+		Now we obtained normalization parameter. Then we have
+		\begin{align}
+			\vec{P}_\Lambda=\frac{(\alpha+\cos\theta)\hat\Lambda+\beta(\vec P_\Xi\times\hat\Lambda)+\gamma\hat\Lambda\times(\vec P_\Xi\times\hat\Lambda)}{1+\alpha\cos\theta}
+		\end{align}
 	\end{block}
 \end{frame}
 \end{document}
